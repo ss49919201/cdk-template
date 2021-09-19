@@ -5,12 +5,15 @@ export class QueueStack extends cdk.Stack {
     constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
 
-        const queue = new sqs.Queue(this, "queue", {})
+        const queue = new sqs.Queue(this, "queue", {
+            queueName: "queue.fifo",
+            fifo: true,
+        })
 
         // Export
         new cdk.CfnOutput(this, "queue-arn", {
-            // key
-            value: queue.queueArn
+            value: queue.queueArn,
+            exportName: "queue-arn",
         })
     }
 }

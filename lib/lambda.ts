@@ -3,7 +3,7 @@ import * as lambda from "@aws-cdk/aws-lambda";
 import * as ecr from "@aws-cdk/aws-ecr";
 import * as sqs from "@aws-cdk/aws-sqs";
 import { SqsEventSource } from '@aws-cdk/aws-lambda-event-sources';
-import { Role, ServicePrincipal, ManagedPolicy } from "@aws-cdk/aws-iam";
+import { StringParameter } from '@aws-cdk/aws-ssm';
 import { SecretValue } from "@aws-cdk/core";
 
 export class LambdaStack extends cdk.Stack {
@@ -25,21 +25,21 @@ export class LambdaStack extends cdk.Stack {
     const source = new SqsEventSource(queue)
 
     // デプロイ時にはイメージを置いておく必要があるので注意
-    // NOTE: 環境変数はSecretsManagerから取得
+    // NOTE: 環境変数はSecretsManager,SSMから取得(管理を一元化、CFnテンプレートに値をハードコーディングしない)
     // https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/configuration-envvars.html#configuration-envvars-samples
     // https://dev.classmethod.jp/articles/cdk-approval-pipeline/
     const func = new lambda.DockerImageFunction(this, "Lambda", {
       code: lambda.DockerImageCode.fromEcr(repository, {}),
       functionName: "lambda",
       environment: {
-        "USER": SecretValue.secretsManager('USER').toString(),
-        "PASSWORD": SecretValue.secretsManager('PASSWORD').toString(),
-        "PROTOCOL": SecretValue.secretsManager('PROTOCOL').toString(),
-        "DB_HOST": SecretValue.secretsManager('DB_HOST').toString(),
-        "DB_NAME": SecretValue.secretsManager('DB_NAME').toString(),
-      }
+        "USER": SecretValue.secretsManager("USER").toString(),
+        "PASSWORD": SecretValue.secretsManager("PASSWORD").toString(),
+        "PROTOCOL": SecretValue.secretsManager("PROTOCOL").toString(),
+        "DB_HOST": SecretValue.secretsManager("DB_HOST").toString(),
+        "DB_NAME": SecretValue.secretsManager("DB_NAME").toString(),
+        "ID": StringParameter.valueForStringParameter(this, "ID"),
+      },
+      events: [source],
     });
-
-    func.addEventSource(source)
   }
 }

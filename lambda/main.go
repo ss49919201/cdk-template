@@ -17,7 +17,7 @@ func handler(ctx context.Context, sqsEvent events.SQSEvent) error {
 	protocol := os.Getenv("PROTOCOL")
 	dbHost := os.Getenv("DB_HOST")
 	dbName := os.Getenv("DB_NAME")
-	dsn := user + ":" + password + "@" + protocol + "(" + dbHost + ":3306/" + dbName + ")"
+	dsn := user + ":" + password + "@" + protocol + "(" + dbHost + ":3306)/" + dbName
 	fmt.Println("Data source name:", dsn)
 
 	// DB接続
@@ -36,7 +36,8 @@ func handler(ctx context.Context, sqsEvent events.SQSEvent) error {
 		fmt.Println("Failed to excecute query 'SHOW DATABASES':", err)
 		return err
 	}
-	fmt.Println("Sucess excecute query 'SHOW DATABASES'", r)
+	fmt.Println("Sucess excecute query 'SHOW DATABASES' ", r)
+	fmt.Println("Rows :", r)
 
 	for _, message := range sqsEvent.Records {
 		fmt.Printf("The message %s for event source %s = %s \n", message.MessageId, message.EventSource, message.Body)

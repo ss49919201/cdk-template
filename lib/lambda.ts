@@ -1,6 +1,7 @@
 import * as cdk from "@aws-cdk/core";
 import * as lambda from "@aws-cdk/aws-lambda";
 import * as ecr from "@aws-cdk/aws-ecr";
+import * as ec2 from "@aws-cdk/aws-ec2";
 import * as sqs from "@aws-cdk/aws-sqs";
 import { SqsEventSource } from '@aws-cdk/aws-lambda-event-sources';
 import { StringParameter } from '@aws-cdk/aws-ssm';
@@ -21,8 +22,14 @@ export class LambdaStack extends cdk.Stack {
       }
     );
 
+    // イベントソースとなるQueue
     const queue = sqs.Queue.fromQueueArn(this, "queue", cdk.Fn.importValue("queue-arn"))
     const source = new SqsEventSource(queue)
+
+    // LambdaをデプロイするVPC
+    const vpc = ec2.Vpc.fromLookup(this, "vpc", {
+      vpcId: this.node.tryGetContext("vpcID"),
+    })
 
     // デプロイ時にはイメージを置いておく必要があるので注意
     // NOTE: 環境変数はSecretsManager,SSMから取得(管理を一元化、CFnテンプレートに値をハードコーディングしない)
@@ -40,6 +47,7 @@ export class LambdaStack extends cdk.Stack {
         "ID": StringParameter.valueForStringParameter(this, "ID"),
       },
       events: [source],
+      vpc: vpc,
     });
   }
 }

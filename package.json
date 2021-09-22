@@ -21,6 +21,10 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-codebuild": "^1.123.0",
+    "@aws-cdk/aws-codedeploy": "^1.123.0",
+    "@aws-cdk/aws-codepipeline": "^1.123.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.123.0",
     "@aws-cdk/aws-ecr": "1.123.0",
     "@aws-cdk/aws-iam": "1.123.0",
     "@aws-cdk/aws-lambda": "1.123.0",

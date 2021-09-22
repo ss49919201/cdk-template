@@ -35,7 +35,7 @@ export class LambdaFunctionStack extends cdk.Stack {
     // https://dev.classmethod.jp/articles/cdk-approval-pipeline/
     const fn = new lambda.DockerImageFunction(this, "Lambda", {
       code: lambda.DockerImageCode.fromEcr(repository, {}),
-      functionName: "lambda",
+      functionName: "function",
       events: [source],
       vpc: vpc,
     });

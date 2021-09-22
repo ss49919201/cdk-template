@@ -21,5 +21,11 @@ export class ECRStack extends cdk.Stack {
             value: repository.repositoryArn,
             exportName: "repository-arn",
         })
+
+        // Export
+        new cdk.CfnOutput(this, "repository-uri", {
+            value: repository.repositoryUri,
+            exportName: "repository-uri",
+        })
     }
 }

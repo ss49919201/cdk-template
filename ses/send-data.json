@@ -1,0 +1,10 @@
+{
+    "Source": "Sender Name <メールアカウント@メールサーバー>",
+    "Template": "loop",
+    "Destination": {
+        "ToAddresses": [
+            "送信先アドレス"
+        ]
+    },
+    "TemplateData": "{\"subject\":\"題名\",\"objects\":[{\"name\":\"hoge\",\"age\":\"90\"},{\"name\":\"fuga\",\"age\":\"126\"}]}"
+}

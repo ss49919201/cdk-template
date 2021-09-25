@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Amazon SES Template Sample Template
+Resources:
+  Template:
+    Type: 'AWS::SES::Template'
+    Properties:
+      Template:
+        TemplateName: UsersList
+        SubjectPart: UsersList
+        TextPart:
+            Users
+
+            {{#each users}}
+
+            名前：{{name}}
+
+            年齢：{{age}}
+
+            趣味：{{hobby}}
+            
+            {{/each}}
+            
+            By!

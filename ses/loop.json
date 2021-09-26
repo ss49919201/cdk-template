@@ -2,6 +2,6 @@
     "Template": {
         "TemplateName": "loop",
         "SubjectPart": "{{subject}}",
-        "TextPart": "Loop:\n{{#each objects}}名前は:{{name}}\n年齢は:{{age}}\n{{/each}}以上！"
+        "TextPart": "Loop:\n{{#each objects}}名前は{{name}}\n年齢は{{age}}趣味は{{#each hobbies}}{{.}}{{/each}}\n{{/each}}以上！"
     }
 }

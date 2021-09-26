@@ -14,6 +14,6 @@ Resources:
           名前：{{name}}
           年齢：{{age}}
           # 文字列の配列をループ
-          趣味：{{#each hobbies}} {{.}} {{/each}}
+          趣味：{{#each hobbies}}{{this}}{{#if @last}}{{else}}、{{/if}}{{/each}}
           {{/each}}
           By!

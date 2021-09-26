@@ -10,13 +10,15 @@ Resources:
         TextPart:
             Users
 
+            # オブジェクトの配列をループ
             {{#each users}}
 
             名前：{{name}}
 
             年齢：{{age}}
 
-            趣味：{{hobby}}
+            # 文字列の配列をループ
+            趣味：{{#each hobbies}} {{.}} {{/each}}
             
             {{/each}}
             

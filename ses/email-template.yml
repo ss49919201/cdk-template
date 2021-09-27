@@ -7,13 +7,13 @@ Resources:
       Template:
         TemplateName: UsersList
         SubjectPart: UsersList
-      TextPart:
-          Users
-          # オブジェクトの配列をループ
-          {{#each users}}
-          名前：{{name}}
-          年齢：{{age}}
-          # 文字列の配列をループ
-          趣味：{{#each hobbies}}{{this}}{{#unless @last}}、{{/unless}}{{/each}}
-          {{/each}}
-          By!
+        TextPart:
+            |-
+            Users
+            {{#each users ~}}
+            名前：{{name}}
+            年齢：{{age}}
+            {{#unless @last}}
+            {{/unless ~}}
+            {{/each ~}}
+            By!

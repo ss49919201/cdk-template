@@ -5,6 +5,7 @@ import { LambdaFunctionStack } from '../lib/lambda';
 import { QueueStack } from '../lib/queue';
 import { EcrStack } from '../lib/ecr';
 import { DeployStack } from '../lib/deploy';
+import { ListenEcsStack } from '../lib/listen_ecs';
 // import { RdsStack } from '../lib/rds';
 
 const env = { account: process.env.ACCOUNT, region: process.env.REGION }
@@ -13,4 +14,5 @@ new LambdaFunctionStack(app, 'LambdaFunctionStack', { env });
 new QueueStack(app, 'QueueStack', { env });
 new EcrStack(app, 'EcrStack', { env });
 new DeployStack(app, 'DeployStack', { env });
+new ListenEcsStack(app, 'ListenEcsStack', { env });
 // new RdsStack(app, 'RdsStack', { env });

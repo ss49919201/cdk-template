@@ -34,7 +34,7 @@ export class LambdaFunctionStack extends cdk.Stack {
     // https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/configuration-envvars.html#configuration-envvars-samples
     // https://dev.classmethod.jp/articles/cdk-approval-pipeline/
     const fn = new lambda.DockerImageFunction(this, 'Lambda', {
-      code: lambda.DockerImageCode.fromEcr(repository, {}),
+      code: lambda.DockerImageCode.fromEcr(repository, { tag: 'sqs' }),
       functionName: 'function',
       events: [source],
       vpc: vpc,

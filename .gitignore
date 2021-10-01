@@ -7,5 +7,7 @@ node_modules
 .cdk.staging
 cdk.out
 
-lambda/Makefile
+lambda/sqs/Makefile
+lambda/cloudwatch/Makefile
+go-server/build-and-push.sh
 Makefile

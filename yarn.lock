@@ -414,6 +414,31 @@
     "@aws-cdk/custom-resources" "1.125.0"
     constructs "^3.3.69"
 
+"@aws-cdk/aws-events-targets@^1.125.0":
+  version "1.125.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-events-targets/-/aws-events-targets-1.125.0.tgz#6e1e8328ebbb824782fe3893673876d0bf9a6f0d"
+  integrity sha512-ybmhwkXZC6jnr0EuiOmHKeKrGIqLR2ZnVxvRMfSpFx7KMVR66vbpjGgccVMZWwPzRCbB/8GynnL2DxaBF5BEtQ==
+  dependencies:
+    "@aws-cdk/aws-apigateway" "1.125.0"
+    "@aws-cdk/aws-codebuild" "1.125.0"
+    "@aws-cdk/aws-codepipeline" "1.125.0"
+    "@aws-cdk/aws-ec2" "1.125.0"
+    "@aws-cdk/aws-ecs" "1.125.0"
+    "@aws-cdk/aws-events" "1.125.0"
+    "@aws-cdk/aws-iam" "1.125.0"
+    "@aws-cdk/aws-kinesis" "1.125.0"
+    "@aws-cdk/aws-kinesisfirehose" "1.125.0"
+    "@aws-cdk/aws-kms" "1.125.0"
+    "@aws-cdk/aws-lambda" "1.125.0"
+    "@aws-cdk/aws-logs" "1.125.0"
+    "@aws-cdk/aws-sns" "1.125.0"
+    "@aws-cdk/aws-sns-subscriptions" "1.125.0"
+    "@aws-cdk/aws-sqs" "1.125.0"
+    "@aws-cdk/aws-stepfunctions" "1.125.0"
+    "@aws-cdk/core" "1.125.0"
+    "@aws-cdk/custom-resources" "1.125.0"
+    constructs "^3.3.69"
+
 "@aws-cdk/aws-events@1.125.0":
   version "1.125.0"
   resolved "https://registry.npmjs.org/@aws-cdk/aws-events/-/aws-events-1.125.0.tgz"
@@ -1604,6 +1629,26 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
+aws-cdk-lib@^2.0.0-rc.23:
+  version "2.0.0-rc.23"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.0.0-rc.23.tgz#4581fdabeb61f984fc6908df9d8ac8651497b2df"
+  integrity sha512-X7yuSGc9TQEsJBaku0WqwkHoZzAhgV2SRLTB0afEuP7TGu2H+i9Dzgs1hiKFjOO3GWuVHPuAqiJKP2gmnSRtVQ==
+  dependencies:
+    "@balena/dockerignore" "^1.0.2"
+    case "1.6.3"
+    colors "^1.4.0"
+    diff "^5.0.0"
+    fast-deep-equal "^3.1.3"
+    fs-extra "^9.1.0"
+    ignore "^5.1.8"
+    jsonschema "^1.4.0"
+    minimatch "^3.0.4"
+    punycode "^2.1.1"
+    semver "^7.3.5"
+    string-width "^4.2.2"
+    table "^6.7.1"
+    yaml "1.10.2"
+
 aws-cdk@1.125.0:
   version "1.125.0"
   resolved "https://registry.npmjs.org/aws-cdk/-/aws-cdk-1.125.0.tgz"
@@ -2205,6 +2250,8 @@ escodegen@^1.8.1:
     estraverse "^4.2.0"
     esutils "^2.0.2"
     optionator "^0.8.1"
+  optionalDependencies:
+    source-map "~0.6.1"
 
 escodegen@^2.0.0:
   version "2.0.0"
@@ -3154,6 +3201,8 @@ jsonfile@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
   integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  optionalDependencies:
+    graceful-fs "^4.1.6"
 
 jsonfile@^6.0.1:
   version "6.1.0"

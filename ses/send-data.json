@@ -6,5 +6,5 @@
             "送信先アドレス"
         ]
     },
-    "TemplateData": "{\"subject\":\"題名\",\"objects\":[{\"name\":\"hoge\",\"age\":\"90\"},{\"name\":\"fuga\",\"age\":\"126\"}]}"
+    "TemplateData": "{\"subject\":\"題名\",\"users\":[{\"name\":\"hoge\",\"age\":\"90\",\"hobbies\":[\"a\",\"b\",\"c\"]}`]}"
 }

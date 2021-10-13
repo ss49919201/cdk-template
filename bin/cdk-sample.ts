@@ -13,7 +13,7 @@ const env = { account: process.env.ACCOUNT, region: process.env.REGION }
 const app = new cdk.App();
 new LambdaFunctionStack(app, 'LambdaFunctionStack', { env });
 new QueueStack(app, 'QueueStack', { env });
-new EcrStack(app, 'ECRStack', { env });
+new EcrStack(app, 'EcrStack', { env });
 new DeployStack(app, 'DeployStack', { env });
 new ListenEcsStack(app, 'ListenEcsStack', { env });
 new StorageStack(app, 'StorageStack', { env });

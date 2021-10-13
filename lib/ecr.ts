@@ -5,8 +5,8 @@ export class EcrStack extends cdk.Stack {
     constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
         // ECRリポジトリを作成
-        const repository = new ecr.Repository(this, "repository", {
-            repositoryName: "repository"
+        const repository = new ecr.Repository(this, "repo", {
+            repositoryName: "repo"
         })
         // Export
         new cdk.CfnOutput(this, "repository-name", {

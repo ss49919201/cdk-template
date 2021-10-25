@@ -491,7 +491,7 @@
     "@aws-cdk/region-info" "1.125.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-events-targets@1.125.0", "@aws-cdk/aws-events-targets@^1.125.0":
+"@aws-cdk/aws-events-targets@1.125.0":
   version "1.125.0"
   resolved "https://registry.npmjs.org/@aws-cdk/aws-events-targets/-/aws-events-targets-1.125.0.tgz"
   integrity sha512-ybmhwkXZC6jnr0EuiOmHKeKrGIqLR2ZnVxvRMfSpFx7KMVR66vbpjGgccVMZWwPzRCbB/8GynnL2DxaBF5BEtQ==
@@ -634,7 +634,7 @@
     "@aws-cdk/core" "1.125.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-lambda-go@^1.125.0":
+"@aws-cdk/aws-lambda-go@1.128.0":
   version "1.128.0"
   resolved "https://registry.npmjs.org/@aws-cdk/aws-lambda-go/-/aws-lambda-go-1.128.0.tgz"
   integrity sha512-M/+VmPPzHgG1BcH94xOoRhg0oMk1lPmCNGwu0cZpAQTviy7Bp6pdIbzOJeagOIsunCCdToQFgflgYxrBqujFpA==
@@ -1870,7 +1870,7 @@ at-least-node@^1.0.0:
   resolved "https://registry.npmjs.org/at-least-node/-/at-least-node-1.0.0.tgz"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
-aws-cdk-lib@^2.0.0-rc.23:
+aws-cdk-lib@2.0.0-rc.24:
   version "2.0.0-rc.24"
   resolved "https://registry.npmjs.org/aws-cdk-lib/-/aws-cdk-lib-2.0.0-rc.24.tgz"
   integrity sha512-GnxyT3vZE6QSJ9I87d9tTvUB+o+GAWxRIGCtrC+/1wkNDYT/+L2URLKNMPa/K3MVvk70eYsmmQ8IO/lfkNn6Ag==

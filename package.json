@@ -26,15 +26,15 @@
     "@aws-cdk/aws-codepipeline": "1.125.0",
     "@aws-cdk/aws-codepipeline-actions": "1.125.0",
     "@aws-cdk/aws-ecr": "1.125.0",
-    "@aws-cdk/aws-events-targets": "^1.125.0",
+    "@aws-cdk/aws-events-targets": "1.125.0",
     "@aws-cdk/aws-iam": "1.125.0",
     "@aws-cdk/aws-lambda": "1.125.0",
     "@aws-cdk/aws-lambda-event-sources": "1.125.0",
-    "@aws-cdk/aws-lambda-go": "^1.125.0",
+    "@aws-cdk/aws-lambda-go": "1.128.0",
     "@aws-cdk/aws-rds": "1.125.0",
     "@aws-cdk/aws-sqs": "1.125.0",
     "@aws-cdk/core": "1.125.0",
-    "aws-cdk-lib": "^2.0.0-rc.23",
+    "aws-cdk-lib": "2.0.0-rc.24",
     "source-map-support": "0.5.20"
   }
 }

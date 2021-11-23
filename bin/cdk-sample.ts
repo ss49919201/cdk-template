@@ -7,6 +7,7 @@ import { EcrStack } from '../lib/ecr';
 import { DeployStack } from '../lib/deploy';
 import { ListenEcsStack } from '../lib/listen_ecs';
 import { StorageStack } from '../lib/storage';
+import { ScheduledLambdaStack } from '../lib/scheduled_lambda';
 // import { RdsStack } from '../lib/rds';
 
 const env = { account: process.env.ACCOUNT, region: process.env.REGION }
@@ -17,4 +18,5 @@ new EcrStack(app, 'EcrStack', { env });
 new DeployStack(app, 'DeployStack', { env });
 new ListenEcsStack(app, 'ListenEcsStack', { env });
 new StorageStack(app, 'StorageStack', { env });
+new ScheduledLambdaStack(app, 'ScheduledLambdaStack', { env });
 // new RdsStack(app, 'RdsStack', { env });

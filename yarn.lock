@@ -521,6 +521,16 @@
     "@aws-cdk/core" "1.132.0"
     constructs "^3.3.69"
 
+"@aws-cdk/aws-lambda-python@1.132.0":
+  version "1.132.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-lambda-python/-/aws-lambda-python-1.132.0.tgz#1d89385c1f5c1b4048d125c2fda7bccaf35ac044"
+  integrity sha512-eFhKnd0GVRsCR5h4ov9n7xhQfZ98TvJGRRZrGTP9OJXx0y4gc2FFcgPJL7oKnfcOJ0cGw67TBW/fZt2cHbg8fQ==
+  dependencies:
+    "@aws-cdk/aws-ec2" "1.132.0"
+    "@aws-cdk/aws-lambda" "1.132.0"
+    "@aws-cdk/core" "1.132.0"
+    constructs "^3.3.69"
+
 "@aws-cdk/aws-lambda@1.132.0":
   version "1.132.0"
   resolved "https://registry.npmjs.org/@aws-cdk/aws-lambda/-/aws-lambda-1.132.0.tgz"
@@ -1928,6 +1938,8 @@ chokidar@^3.5.2:
     is-glob "~4.0.1"
     normalize-path "~3.0.0"
     readdirp "~3.6.0"
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 ci-info@^3.2.0:
   version "3.2.0"
@@ -2248,6 +2260,8 @@ escodegen@^1.8.1:
     estraverse "^4.2.0"
     esutils "^2.0.2"
     optionator "^0.8.1"
+  optionalDependencies:
+    source-map "~0.6.1"
 
 escodegen@^2.0.0:
   version "2.0.0"
@@ -3222,6 +3236,8 @@ jsonfile@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
   integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  optionalDependencies:
+    graceful-fs "^4.1.6"
 
 jsonfile@^6.0.1:
   version "6.1.0"

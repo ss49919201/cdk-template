@@ -10,6 +10,7 @@ export class RandomResultStack extends cdk.Stack {
     const queue = sqs.Queue.fromQueueArn(this, 'queue', cdk.Fn.importValue('queue-arn'))
     const source = new SqsEventSource(queue, {
       maxBatchingWindow: cdk.Duration.seconds(10),
+      reportBatchItemFailures: true, // バッチ内のメッセージの一部を失敗したメッセージとしてキューに返す
     })
     new lambda.GoFunction(this, 'RandomResult', {
       entry: 'lambda/random_result',

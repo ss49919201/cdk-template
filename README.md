@@ -22,3 +22,9 @@ $ ACCOUNT=xxx REGION=xxx npx cdk deploy -all
 ```
 $ ACCOUNT={アカウント} REGION={リージョン} npx cdk deploy {スタック名}
 ```
+
+## show bootstrap template
+
+```
+$ cdk bootstrap --show-template
+```

@@ -36,6 +36,6 @@
     "@aws-cdk/aws-sqs": "1.163.2",
     "@aws-cdk/core": "1.163.2",
     "aws-cdk-lib": "2.32.0",
-    "source-map-support": "0.5.20"
+    "source-map-support": "0.5.21"
   }
 }

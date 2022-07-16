@@ -6,6 +6,10 @@
 
 `aws ses update-template --cli-input-json file://ses/loop.json`
 
+# メールの送信
+
+`aws ses send-email --from ${FROM} --to ${TO} --subject subject --text text`
+
 # テンプレートを用いたメールの送信
 
 `aws ses send-templated-email --cli-input-json file://ses/send-data.json`

@@ -1,10 +1,10 @@
 # テンプレートの作成
 
-`aws ses create-template --cli-input-json file://ses/loop.json`
+`aws ses create-template --cli-input-json file://ses/user-list.json`
 
 # テンプレートの更新
 
-`aws ses update-template --cli-input-json file://ses/loop.json`
+`aws ses update-template --cli-input-json file://ses/user-list.json`
 
 # メールの送信
 

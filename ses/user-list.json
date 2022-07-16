@@ -1,6 +1,6 @@
 {
     "Template": {
-        "TemplateName": "loop",
+        "TemplateName": "user-list",
         "SubjectPart": "{{subject}}",
         "TextPart": "Users{{#each users}}名前：{{name}}年齢：{{age}}趣味：{{#each hobbies}}{{this}}{{#unless @last}}、{{/unless}}{{/each}}{{#unless @last ~}}{{/unless ~}}{{/each}}By!"
     }

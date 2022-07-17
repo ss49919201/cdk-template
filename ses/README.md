@@ -27,3 +27,7 @@ aws cloudformation update-stack \
 # テンプレートを用いたメールの送信
 
 `aws ses send-templated-email --cli-input-json file://send-data.json`
+
+# `~`(Tilde)でホワイトスペースをコントロール
+
+https://handlebarsjs.com/guide/expressions.html#whitespace-control

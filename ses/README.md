@@ -1,10 +1,24 @@
 # テンプレートの作成
 
-`aws ses create-template --cli-input-json file://ses/user-list.json`
+```sh
+aws ses create-template --cli-input-json file://user-list.json
+
+aws cloudformation create-stack \
+--stack-name email-template \
+--region ap-northeast-1 \
+--template-body file://condition.yml
+```
 
 # テンプレートの更新
 
-`aws ses update-template --cli-input-json file://ses/user-list.json`
+```sh
+aws ses update-template --cli-input-json file://user-list.json
+
+aws cloudformation update-stack \
+--stack-name email-template \
+--region ap-northeast-1 \
+--template-body file://condition.yml
+```
 
 # メールの送信
 
@@ -12,4 +26,4 @@
 
 # テンプレートを用いたメールの送信
 
-`aws ses send-templated-email --cli-input-json file://ses/send-data.json`
+`aws ses send-templated-email --cli-input-json file://send-data.json`

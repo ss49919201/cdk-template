@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Amazon SES Template Sample Template
+Resources:
+  Template:
+    Type: 'AWS::SES::Template'
+    Properties:
+      Template:
+        TemplateName: Condition
+        SubjectPart: タイトル
+        TextPart:
+            |-
+            Hello!
+
+            hoge
+            {{#if UserName ~}}
+            {{UserName}}
+            {{/if}}
+            By!

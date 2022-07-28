@@ -1,5 +1,11 @@
 {
-  "matchPaths": ["lambda/**"],
+  "packageRules": [
+    {
+      "matchPaths": [
+        "lambda/**"
+      ]
+    }
+  ],
   "extends": [
     "config:base"
   ]

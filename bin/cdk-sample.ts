@@ -9,7 +9,7 @@ import { ListenEcsStack } from '../lib/listen_ecs';
 import { StorageStack } from '../lib/storage';
 import { ScheduledLambdaStack } from '../lib/scheduled_lambda';
 import { RandomResultStack } from '../lib/random_result';
-// import { RdsStack } from '../lib/rds';
+import { RdsStack } from '../lib/rds';
 
 const env = { account: process.env.ACCOUNT, region: process.env.REGION }
 const app = new cdk.App();
@@ -21,4 +21,7 @@ new ListenEcsStack(app, 'ListenEcsStack', { env });
 new StorageStack(app, 'StorageStack', { env });
 new ScheduledLambdaStack(app, 'ScheduledLambdaStack', { env });
 new RandomResultStack(app, 'RandomResultStack', { env });
-// new RdsStack(app, 'RdsStack', { env });
+
+app.node.tryGetContext('rds') === 'true'
+    ? new RdsStack(app, 'RdsStack', { env })
+    : null;

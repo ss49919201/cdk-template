@@ -1,4 +1,7 @@
 {
+  "includePaths": [
+    "lambda/**"
+  ],
   "extends": [
     "config:base"
   ]

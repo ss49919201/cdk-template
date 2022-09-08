@@ -10,17 +10,20 @@ import { StorageStack } from '../lib/storage';
 import { ScheduledLambdaStack } from '../lib/scheduled_lambda';
 import { RandomResultStack } from '../lib/random_result';
 import { RdsStack } from '../lib/rds';
+import { EcsStack } from '../lib/ecs';
 
 const env = { account: process.env.ACCOUNT, region: process.env.REGION }
 const app = new cdk.App();
 new LambdaFunctionStack(app, 'LambdaFunctionStack', { env });
 new QueueStack(app, 'QueueStack', { env });
-new EcrStack(app, 'EcrStack', { env });
 new DeployStack(app, 'DeployStack', { env });
 new ListenEcsStack(app, 'ListenEcsStack', { env });
 new StorageStack(app, 'StorageStack', { env });
 new ScheduledLambdaStack(app, 'ScheduledLambdaStack', { env });
 new RandomResultStack(app, 'RandomResultStack', { env });
+
+const ecrStack = new EcrStack(app, 'EcrStack', { env });
+new EcsStack(app, 'EcsStack', { env, repository: ecrStack.repository });
 
 app.node.tryGetContext('rds') === 'true'
     ? new RdsStack(app, 'RdsStack', { env })

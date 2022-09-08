@@ -3,6 +3,8 @@ import { Construct } from 'constructs';
 import * as ecr from "aws-cdk-lib/aws-ecr";
 
 export class EcrStack extends cdk.Stack {
+    public readonly repository: ecr.Repository;
+
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
         // ECRリポジトリを作成

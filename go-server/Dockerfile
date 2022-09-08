@@ -10,6 +10,7 @@ RUN go mod download
 
 COPY *.go ./
 
+# ECS or Lambda へのデプロイを想定しているので、GOOS=linux
 RUN GOOS=linux go build -o /docker-gs-ping
 
 EXPOSE 8080

@@ -1,12 +1,12 @@
-import * as cdk from '@aws-cdk/core';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as ecr from '@aws-cdk/aws-ecr';
-import * as ec2 from '@aws-cdk/aws-ec2';
-import * as sqs from '@aws-cdk/aws-sqs';
-import { SqsEventSource } from '@aws-cdk/aws-lambda-event-sources';
+import * as cdk from 'aws-cdk-lib/core';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as ecr from 'aws-cdk-lib/aws-ecr';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import * as sqs from 'aws-cdk-lib/aws-sqs';
+import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
 
 export class LambdaFunctionStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     // ECRリポジトリをARN経由で参照
     // token取得の場合はnameとarnの指定が必要

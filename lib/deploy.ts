@@ -1,10 +1,11 @@
-import * as cdk from "@aws-cdk/core";
-import * as codebuild from "@aws-cdk/aws-codebuild";
-import * as iam from "@aws-cdk/aws-iam";
+import * as cdk from "aws-cdk-lib";
+import * as codebuild from "aws-cdk-lib/aws-codebuild";
+import * as iam from "aws-cdk-lib/aws-iam";
+import { Construct } from 'constructs';
 
 
 export class DeployStack extends cdk.Stack {
-    constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+    constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
         const repositoryURI = cdk.Fn.importValue("repository-uri")
         const lambdaName = cdk.Fn.importValue("lambda-name")

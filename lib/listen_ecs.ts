@@ -1,11 +1,11 @@
-import * as cdk from '@aws-cdk/core';
-import * as targets from '@aws-cdk/aws-events-targets';
-import * as events from '@aws-cdk/aws-events';
-import * as lambda from '@aws-cdk/aws-lambda-go';
+import * as cdk from 'aws-cdk-lib/core';
+import * as targets from 'aws-cdk-lib/aws-events-targets';
+import * as events from 'aws-cdk-lib/aws-events';
+import * as lambda from 'aws-cdk-lib/aws-lambda-go';
 
 
 export class ListenEcsStack extends cdk.Stack {
-    constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+    constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
         const clusterArn = this.node.tryGetContext('cluster-arn')
 

@@ -1,9 +1,10 @@
-import * as cdk from "@aws-cdk/core";
-import * as sqs from "@aws-cdk/aws-sqs";
-import { Duration } from "@aws-cdk/core";
+import * as cdk from "aws-cdk-lib";
+import { Construct } from 'constructs';
+import * as sqs from "aws-cdk-lib/aws-sqs";
+import { Duration } from "aws-cdk-lib/core";
 
 export class QueueStack extends cdk.Stack {
-    constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+    constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
 
         const deadLetterQueue = new sqs.Queue(this, "deadLetterQueue", {

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 
@@ -9,6 +10,9 @@ import (
 )
 
 func main() {
+	go func() {
+		fmt.Println("alive sever 🍣")
+	}()
 
 	e := echo.New()
 

@@ -19,7 +19,7 @@ export class RdsStack extends cdk.Stack {
                 // optional , defaults to t3.medium
                 instanceType: ec2.InstanceType.of(ec2.InstanceClass.BURSTABLE2, ec2.InstanceSize.SMALL),
                 vpcSubnets: {
-                    subnetType: ec2.SubnetType.PRIVATE,
+                    subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
                 },
                 vpc,
             },

@@ -1,7 +1,8 @@
 import * as cdk from 'aws-cdk-lib/core';
-import * as lambda from 'aws-cdk-lib/aws-lambda-go';
+import * as lambda from '@aws-cdk/aws-lambda-go-alpha';
 import * as sqs from 'aws-cdk-lib/aws-sqs';
 import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
+import { Construct } from 'constructs';
 
 export class RandomResultStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {

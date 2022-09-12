@@ -4,6 +4,7 @@ import * as ecr from 'aws-cdk-lib/aws-ecr';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as sqs from 'aws-cdk-lib/aws-sqs';
 import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
+import { Construct } from 'constructs';
 
 export class LambdaFunctionStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {

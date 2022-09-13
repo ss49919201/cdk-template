@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as targets from 'aws-cdk-lib/aws-events-targets';
 import * as events from 'aws-cdk-lib/aws-events';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
@@ -15,18 +15,18 @@ export class ListenEcsStack extends cdk.Stack {
         const fn = new lambda.Function(this, 'ListenECSFunction', {
             runtime: lambda.Runtime.GO_1_X,
             handler: 'listen-ecs',
-            code: lambda.Code.fromAsset(path.join(__dirname, 'lambda/listen-ecs')),
+            code: lambda.Code.fromAsset(path.join(__dirname, '../lambda/listen-ecs')),
         });
 
-        // const targetFunction = new targets.LambdaFunction(fn)
+        const targetFunction = new targets.LambdaFunction(fn)
 
-        // new events.Rule(this, 'ScheduleRule', {
-        //     eventPattern: {
-        //         source: ['aws.ecs'],
-        //         detail: { 'clusterArn': [clusterArn] },
-        //         detailType: ['ECS Task State Change']
-        //     },
-        //     targets: [targetFunction],
-        // });
+        new events.Rule(this, 'ScheduleRule', {
+            eventPattern: {
+                source: ['aws.ecs'],
+                detail: { 'clusterArn': [clusterArn] },
+                detailType: ['ECS Task State Change']
+            },
+            targets: [targetFunction],
+        });
     }
 }

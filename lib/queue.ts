@@ -1,7 +1,7 @@
 import * as cdk from "aws-cdk-lib";
 import { Construct } from 'constructs';
 import * as sqs from "aws-cdk-lib/aws-sqs";
-import { Duration } from "aws-cdk-lib/core";
+import { Duration } from "aws-cdk-lib";
 
 export class QueueStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {

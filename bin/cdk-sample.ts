@@ -7,6 +7,7 @@ import { EcrStack } from '../lib/ecr';
 import { DeployStack } from '../lib/deploy';
 import { ListenEcsStack } from '../lib/listen_ecs';
 import { StorageStack } from '../lib/storage';
+import { StorageWithCDNStack } from '../lib/storage_with_cdn';
 import { ScheduledLambdaStack } from '../lib/scheduled_lambda';
 import { RandomResultStack } from '../lib/random_result';
 import { RdsStack } from '../lib/rds';
@@ -19,6 +20,7 @@ new QueueStack(app, 'QueueStack', { env });
 new DeployStack(app, 'DeployStack', { env });
 new ListenEcsStack(app, 'ListenEcsStack', { env });
 new StorageStack(app, 'StorageStack', { env });
+new StorageWithCDNStack(app, 'StorageWithCDNStack', { env });
 new ScheduledLambdaStack(app, 'ScheduledLambdaStack', { env });
 new RandomResultStack(app, 'RandomResultStack', { env });
 

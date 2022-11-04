@@ -9,6 +9,14 @@ import { Construct } from 'constructs';
 export class LambdaFunctionStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
+
+    const vpcID = this.node.tryGetContext('vpcID')
+
+    if (!vpcID) {
+      console.log('vpcID is not set')
+      return
+    }
+
     // ECRリポジトリをARN経由で参照
     // token取得の場合はnameとarnの指定が必要
     // https://github.com/aws/aws-cdk/blob/efe5112a2c6ae5e70b2631711b95b04d10062812/packages/%40aws-cdk/aws-ecr/lib/repository.ts#L395

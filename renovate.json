@@ -5,7 +5,8 @@
   "packageRules": [
     {
       "matchPackageNames": [
-        "@types/node"
+        "@types/node",
+        "typescript"
       ],
       "extends": "monorepo:aws-cdk",
       "matchUpdateTypes": ["major"],

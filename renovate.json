@@ -8,7 +8,7 @@
         "@types/node",
         "typescript"
       ],
-      "extends": "monorepo:aws-cdk",
+      "extends": ["monorepo:aws-cdk"],
       "matchUpdateTypes": ["major"],
       "enabled": false
     }

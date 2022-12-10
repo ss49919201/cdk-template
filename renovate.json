@@ -7,10 +7,6 @@
       "matchPackageNames": [
         "@types/node"
       ],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
-    },
-    {
       "extends": "monorepo:aws-cdk",
       "matchUpdateTypes": ["major"],
       "enabled": false

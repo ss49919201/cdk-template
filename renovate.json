@@ -9,7 +9,7 @@
                 "typescript"
             ],
             "matchPackagePatterns": [
-                "^aws-cdk"
+                "^@?aws-cdk"
             ],
             "matchUpdateTypes": [
                 "major"

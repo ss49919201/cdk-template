@@ -4,7 +4,9 @@
   ],
   "packageRules": [
     {
-      "extends": ["monorepo:aws-cdk"],
+      "matchSourceUrls": [
+        "https://github.com/aws/aws-cdk"
+      ],
       "matchPackageNames": [
         "@types/node",
         "typescript"

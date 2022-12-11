@@ -4,15 +4,11 @@
   ],
   "packageRules": [
     {
+      "extends": ["monorepo:aws-cdk"],
       "matchPackageNames": [
         "@types/node",
         "typescript"
       ],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
-    },
-    {
-      "extends": ["monorepo:aws-cdk"],
       "matchUpdateTypes": ["major"],
       "enabled": false
     }

@@ -8,9 +8,14 @@
                 "@types/node",
                 "typescript"
             ],
-            "matchPackagePatterns": [
-                "^@?aws-cdk"
-            ],
+            "groupName": "ignoreMajor"
+        },
+        {
+            "extends": "monorepo:aws-cdk",
+            "groupName": "ignoreMajor"
+        },
+        {
+            "groupName": "ignoreMajor",
             "matchUpdateTypes": [
                 "major"
             ],

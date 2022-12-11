@@ -12,7 +12,8 @@
                 "^@?aws-cdk"
             ],
             "matchUpdateTypes": [
-                "major"
+                "major",
+                "minor"
             ],
             "enabled": false
         }

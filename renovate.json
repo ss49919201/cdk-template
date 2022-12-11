@@ -8,8 +8,8 @@
                 "@types/node",
                 "typescript"
             ],
-            "matchSourceUrls": [
-                "https://github.com/aws/aws-cdk"
+            "matchPackagePatterns": [
+                "*aws-cdk*"
             ],
             "matchUpdateTypes": [
                 "major"

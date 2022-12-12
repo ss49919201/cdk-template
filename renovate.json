@@ -5,14 +5,13 @@
                 "@types/node",
                 "typescript"
             ],
-            "groupName": "ignoreMajor"
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "enabled": false
         },
         {
             "extends": "monorepo:aws-cdk",
-            "groupName": "ignoreMajor"
-        },
-        {
-            "groupName": "ignoreMajor",
             "matchUpdateTypes": [
                 "major"
             ],

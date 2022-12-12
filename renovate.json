@@ -13,7 +13,9 @@
         {
             "extends": "monorepo:aws-cdk",
             "matchUpdateTypes": [
-                "major"
+                "major",
+                "minor",
+                "patch"
             ],
             "enabled": false
         }

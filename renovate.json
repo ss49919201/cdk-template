@@ -1,0 +1,22 @@
+{
+  "baseBranches": ["release"],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "@types/node",
+        "typescript"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "enabled": false
+    },
+    {
+      "extends": "monorepo:aws-cdk",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "enabled": false
+    }
+  ]
+}

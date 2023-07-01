@@ -17,6 +17,12 @@
         "major"
       ],
       "enabled": false
+    },
+    {
+      "matchPackageNames": [
+        "github.com/labstack/echo/v4"
+      ],
+      "enabled": false
     }
   ]
 }
